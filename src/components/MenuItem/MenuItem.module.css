@@ -1,0 +1,55 @@
+.MenuItemContainer {
+    width: 150px;
+    height: 150px;
+    clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s;
+}
+
+.MenuItem {
+    width: 140px;
+    height: 140px;
+    clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+    background-color: cadetblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+
+    font-weight: 500;
+    font-size: 1.3rem;
+    color: #000;
+}
+
+.MenuItemContainer:hover {
+    scale: 1.05;
+    cursor: pointer;
+    box-shadow: 10px 10px 10px orange inset, -10px -10px 10px orange inset, -10px 0px 200px orange inset;
+
+    .MenuItem {
+        background-color: #212121;
+        color: orange;
+        text-decoration: none;
+    }
+}
+
+.LinkStyling {
+    text-decoration: none;
+}
+
+@media screen and (max-width: 400px) {
+    .MenuItemContainer {
+        width: 100px;
+        height: 100px;
+    }
+
+    .MenuItem {
+        width: 90px;
+        height: 90px;
+        font-size: 0.9rem;
+    }
+}
